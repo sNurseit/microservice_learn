@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+#из за того что это не клиент а сервер, убираем лишние настройки
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+#url куда будет происходить регистрацияя микросервисов и и других важных действии
+  service-url: "http://localhost/8081/eureka"
+
+# отключение лишных логов
+
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        dicovery: OFF
+

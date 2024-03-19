@@ -12,7 +12,8 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
 #url куда будет происходить регистрацияя микросервисов и и других важных действии
-  service-url: "http://localhost/8081/eureka"
+  service-url:
+    defaultZone: http://localhost:8081/eureka
 
 # отключение лишных логов
 

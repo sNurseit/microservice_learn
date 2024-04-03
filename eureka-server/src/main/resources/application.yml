@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8761
 
 
 spring:
@@ -11,15 +11,9 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-#url куда будет происходить регистрацияя микросервисов и и других важных действии
-  service-url:
-    defaultZone: http://localhost:8081/eureka
+  instance:
+    prefer-ip-address: true
 
 # отключение лишных логов
 
-  level:
-    com:
-      netflix:
-        eureka: OFF
-        dicovery: OFF
 
